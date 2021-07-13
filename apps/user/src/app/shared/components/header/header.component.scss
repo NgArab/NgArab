@@ -1,0 +1,161 @@
+/*color*/
+$base-color: #ffff;
+$background: #c3002f;
+$border-color: #dd0031;
+/*endcolor*/
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.8rem 0rem;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: transparent;
+    .navbar-brand {
+        padding-right: 4rem;
+        img {
+            height: 35px;
+            width: 77px;
+        }
+    }
+    .navbar-items {
+        display: block;
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0px;
+            padding-left: 4rem;
+            align-items: center;
+            .navbar-item {
+                color: $base-color;
+
+                font-size: 22px;
+                padding-right: 3rem;
+                position: relative;
+            }
+            .navbar-item-button {
+                padding-right: 3rem;
+                .btn {
+                    background-color: $background;
+
+                    color: #ffff;
+                    font-size: 1.2rem;
+                    padding: 0.8rem 1.5rem;
+                    /* box-shadow: none; */
+                    border: none;
+                    border-radius: 0.4rem;
+                }
+            }
+        }
+    }
+    .navbar-items-responsvie {
+        display: none;
+    }
+    .icon-menu {
+        width: 25px;
+        height: 25px;
+        padding-left: 4rem;
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .header {
+        .navbar-items {
+            display: none;
+        }
+        .navbar-items-responsvie {
+            position: absolute;
+            width: 100%;
+            background-color: #15202b;
+            color: white;
+            text-align: center;
+            display: none;
+            top: 100%;
+            .navbar-item {
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                font-size: 20px;
+            }
+            &.active {
+                display: block;
+            }
+            .btn {
+                background-color: $background;
+                color: #ffff;
+                font-size: 1.2rem;
+                padding: 0.8rem 1.5rem;
+                /* box-shadow: none; */
+                border: none;
+                border-radius: 0.4rem;
+                margin-top: 0.5rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .icon-menu {
+            width: 25px;
+            height: 25px;
+            padding-left: 1rem;
+            display: block;
+        }
+        .navbar-brand {
+            padding-right: 1rem;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+    .header {
+        .navbar-items {
+            display: none;
+        }
+        .navbar-items-responsvie {
+            position: absolute;
+            width: 100%;
+            background-color: #15202b;
+            color: white;
+            text-align: center;
+            display: none;
+            top: 100%;
+            .navbar-item {
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                font-size: 20px;
+            }
+            &.active {
+                display: block;
+            }
+            .btn {
+                background-color: $background;
+                color: #ffff;
+                font-size: 1.2rem;
+                padding: 0.8rem 1.5rem;
+                /* box-shadow: none; */
+                border: none;
+                border-radius: 0.4rem;
+                margin-top: 0.5rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .icon-menu {
+            width: 25px;
+            height: 25px;
+            padding-left: 1rem;
+            display: block;
+        }
+        .navbar-brand {
+            padding-right: 1rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 990px) and (max-width: 1200px) {
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1480px) {
+}

@@ -1,1 +1,29 @@
-<p>header works!</p>
+<section class="header" dir="rtl">
+  <div class="navbar-brand">
+    <img src="assets/125161515_685790432374641_6739507034179800526_n.png" />
+  </div>
+  <div class="iconMenu">
+    <img
+      src="assets/icons8-menu.svg"
+      class="icon-menu"
+      (click)="flag = !flag"
+    />
+  </div>
+  <div class="navbar-items">
+    <ul>
+      <li class="navbar-item">الرئسية</li>
+      <li class="navbar-item">من نحن</li>
+      <li class="navbar-item">تاريخنا</li>
+      <li class="navbar-item-button">
+        <button type="button" class="btn">تسجيل دخول</button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="navbar-items-responsvie" [ngClass]="{ active: flag }">
+    <div class="navbar-item">الرئسية</div>
+    <div class="navbar-item">من نحن</div>
+    <div class="navbar-item">تاريخنا</div>
+    <button type="button" class="btn">تسجيل دخول</button>
+  </div>
+</section>
