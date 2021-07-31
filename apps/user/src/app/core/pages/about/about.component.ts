@@ -63,11 +63,9 @@ export class AboutComponent implements OnInit {
   animateSlider() {
     let removedSliderItem: any;
     setInterval(() => {
-      console.log('ggg');
       removedSliderItem = this.testArr[0];
       this.testArr.shift();
       this.testArr.push(removedSliderItem);
-      console.log('this.arr', this.testArr.length);
     }, 7000);
   }
 }
