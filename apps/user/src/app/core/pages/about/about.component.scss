@@ -1,5 +1,15 @@
 .about_pg {
   direction: rtl;
+  background: #000;
+  color: #ececec;
+  padding: 50px 20px;
+
+  .pg-title {
+    font-size: 48px;
+  }
+  .title-desc {
+    font-size: 16px;
+  }
   .slider {
     width: 200%;
     display: flex;
