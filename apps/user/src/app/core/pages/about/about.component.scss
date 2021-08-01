@@ -1,20 +1,19 @@
 .about_pg {
-  direction: rtl;
-  background: #000;
-  color: #ecececec;
-  padding: 50px 20px;
-
+  color: var(--gray);
+  padding: 50px 50px 0 0;
+  overflow: hidden;
   .pg-title {
     font-size: 48px;
   }
   .title-desc {
     font-size: 16px;
+    margin-bottom: 80px;
   }
   .slider {
-    width: 200%;
+    width: 150%;
     display: flex;
     .ele {
-      width: 15rem;
+      width: 20rem;
       margin-left: 1.5rem;
       //   color: #ececec;
 
@@ -28,7 +27,9 @@
       h2 {
         font-size: 16px;
       }
-
+      .member_desc {
+        color: var(--gray-med);
+      }
       img {
         width: 100%;
         height: 13rem;
