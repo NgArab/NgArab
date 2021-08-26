@@ -1,25 +1,20 @@
-/*color*/
-$base-color: #ffff;
-$background: #15202b;
-$second-color: #ffac41;
-/*endcolor*/
 .home {
     height: 100vh !important;
-    background-color: $background;
+    background-color: var(--black);
     display: flex;
-    .partI {
+    .block {
         width: 50%;
         display: flex;
         align-items: center;
 
-        .content {
+        .block__content {
             padding-right: 4rem;
-            .textHome {
-                color: $base-color;
+            .block__content__text {
+                color: var(--white);
                 font-size: 80px;
                 font-weight: bold;
             }
-            .descriptionHome {
+            .block__content__description {
                 color: #f2f2f2;
                 font-size: 25px;
                 margin-top: 1rem;
@@ -27,10 +22,10 @@ $second-color: #ffac41;
                 line-height: 1.88;
             }
 
-            .btn {
-                background-color: $second-color;
+            .block__content__btn {
+                background-color: var(--orange);
 
-                color: $background;
+                color: var(--black);
                 font-size: 1.5rem;
                 padding: 0.8rem 3.5rem;
                 margin-top: 0.5rem;
@@ -47,19 +42,19 @@ $second-color: #ffac41;
 
         display: block;
         padding-top: 9rem;
-        .partI {
+        .block {
             width: 100%;
             display: flex;
             align-items: center;
 
-            .content {
+            .block__content {
                 padding-right: 1rem;
-                .textHome {
-                    color: $base-color;
+                .block__content__text {
+                    color: var(--white);
                     font-size: 30px;
                     font-weight: bold;
                 }
-                .descriptionHome {
+                .block__content__description {
                     color: #f2f2f2;
                     font-size: 15px;
                     margin-top: 1rem;
@@ -67,10 +62,10 @@ $second-color: #ffac41;
                     line-height: 1.88;
                 }
 
-                .btn {
-                    background-color: $second-color;
+                .block__content__btn {
+                    background-color: var(--orange);
 
-                    color: $background;
+                    color: var(--black);
                     font-size: 1.5rem;
                     padding: 0.8rem 3.5rem;
                     margin-top: 0.5rem;
@@ -88,19 +83,19 @@ $second-color: #ffac41;
         min-height: 20rem !important;
         display: block;
         padding-top: 9rem;
-        .partI {
+        .block {
             width: 100%;
             display: flex;
             align-items: center;
 
-            .content {
+            .block__content {
                 padding-right: 2rem;
-                .textHome {
-                    color: $base-color;
+                .block__content__text {
+                    color: var(--white);
                     font-size: 40px;
                     font-weight: bold;
                 }
-                .descriptionHome {
+                .block__content__description {
                     color: #f2f2f2;
                     font-size: 20px;
                     margin-top: 1rem;
@@ -108,10 +103,10 @@ $second-color: #ffac41;
                     line-height: 1.88;
                 }
 
-                .btn {
-                    background-color: $second-color;
+                .block__content__btn {
+                    background-color: var(--orange);
 
-                    color: $background;
+                    color: var(--black);
                     font-size: 1.5rem;
                     padding: 0.8rem 3.5rem;
                     margin-top: 0.5rem;

@@ -1,9 +1,3 @@
-/*color*/
-$base-color: #ffff;
-$background: #c3002f;
-$border-color: #dd0031;
-/*endcolor*/
-
 .header {
     display: flex;
     align-items: center;
@@ -14,14 +8,15 @@ $border-color: #dd0031;
     left: 0px;
     width: 100%;
     background-color: transparent;
-    .navbar-brand {
+    z-index: 10;
+    .navbar__brand {
         padding-right: 4rem;
         img {
             height: 35px;
             width: 77px;
         }
     }
-    .navbar-items {
+    .navbar__items {
         display: block;
         ul {
             display: flex;
@@ -29,18 +24,36 @@ $border-color: #dd0031;
             margin: 0px;
             padding-left: 4rem;
             align-items: center;
-            .navbar-item {
-                color: $base-color;
-
+            .navbar__item {
+                color: var(--white);
                 font-size: 22px;
-                padding-right: 3rem;
+                padding-right: 1.5rem;
+                padding-left: 1.5rem;
                 position: relative;
-            }
-            .navbar-item-button {
-                padding-right: 3rem;
-                .btn {
-                    background-color: $background;
+                cursor: pointer;
+                &::after {
+                    position: absolute;
+                    bottom: -0.7rem;
+                    left: 0;
+                    right: 0;
 
+                    margin: auto;
+                    width: 0px;
+                    content: ".";
+                    color: transparent;
+                    background: var(--red);
+                    height: 2px;
+                    transition: all 0.4s ease-in-out;
+                }
+                &:hover::after {
+                    content: "";
+                    width: 30%;
+                }
+            }
+            .navbar__item__button {
+                padding-right: 3rem;
+                .navbar__item__btn {
+                    background-color: var(--red);
                     color: #ffff;
                     font-size: 1.2rem;
                     padding: 0.8rem 1.5rem;
@@ -51,10 +64,10 @@ $border-color: #dd0031;
             }
         }
     }
-    .navbar-items-responsvie {
+    .navbar__items_responsvie {
         display: none;
     }
-    .icon-menu {
+    .navbar__block_icon_menu {
         width: 25px;
         height: 25px;
         padding-left: 4rem;
@@ -64,10 +77,10 @@ $border-color: #dd0031;
 
 @media only screen and (max-width: 767px) {
     .header {
-        .navbar-items {
+        .navbar__items {
             display: none;
         }
-        .navbar-items-responsvie {
+        .navbar__items__responsvie {
             position: absolute;
             width: 100%;
             background-color: #15202b;
@@ -75,7 +88,7 @@ $border-color: #dd0031;
             text-align: center;
             display: none;
             top: 100%;
-            .navbar-item {
+            .navbar__item {
                 padding-top: 0.5rem;
                 padding-bottom: 0.5rem;
                 font-size: 20px;
@@ -83,8 +96,8 @@ $border-color: #dd0031;
             &.active {
                 display: block;
             }
-            .btn {
-                background-color: $background;
+            .navbar__item__btn {
+                background-color: var(--red);
                 color: #ffff;
                 font-size: 1.2rem;
                 padding: 0.8rem 1.5rem;
@@ -96,13 +109,13 @@ $border-color: #dd0031;
             }
         }
 
-        .icon-menu {
+        .navbar__block_icon_menu {
             width: 25px;
             height: 25px;
             padding-left: 1rem;
             display: block;
         }
-        .navbar-brand {
+        .navbar__brand {
             padding-right: 1rem;
         }
     }
@@ -110,10 +123,10 @@ $border-color: #dd0031;
 
 @media (min-width: 768px) and (max-width: 990px) {
     .header {
-        .navbar-items {
+        .navbar__items {
             display: none;
         }
-        .navbar-items-responsvie {
+        .navbar__items__responsvie {
             position: absolute;
             width: 100%;
             background-color: #15202b;
@@ -121,7 +134,7 @@ $border-color: #dd0031;
             text-align: center;
             display: none;
             top: 100%;
-            .navbar-item {
+            .navbar__item {
                 padding-top: 0.5rem;
                 padding-bottom: 0.5rem;
                 font-size: 20px;
@@ -129,8 +142,8 @@ $border-color: #dd0031;
             &.active {
                 display: block;
             }
-            .btn {
-                background-color: $background;
+            .navbar__item__btn {
+                background-color: var(--red);
                 color: #ffff;
                 font-size: 1.2rem;
                 padding: 0.8rem 1.5rem;
@@ -142,13 +155,13 @@ $border-color: #dd0031;
             }
         }
 
-        .icon-menu {
+        .navbar__block_icon_menu {
             width: 25px;
             height: 25px;
             padding-left: 1rem;
             display: block;
         }
-        .navbar-brand {
+        .navbar__brand {
             padding-right: 1rem;
         }
     }

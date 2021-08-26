@@ -1,22 +1,16 @@
-/*color*/
-$base-color: #ffff;
-$background: #15202b;
-$border-color: #dd0031;
-/*endcolor*/
-
 .footer {
     display: flex;
-    background-color: $background;
+    background-color: var(--black);
     padding: 1rem 0rem;
 
     width: 100%;
-    .partI {
-        color: $base-color;
+    .block__rights {
+        color: var(--white);
         font-size: 18px;
         padding-right: 4rem;
     }
-    .partII {
-        color: $base-color;
+    .block__terms__condition {
+        color: var(--white);
         margin-right: 2rem;
         font-size: 18px;
     }
@@ -25,11 +19,11 @@ $border-color: #dd0031;
 @media only screen and (max-width: 767px) {
     .footer {
         display: block;
-        .partI {
+        .block__rights {
             padding-right: 1rem;
         }
-        .partII {
-            color: $base-color;
+        .block__terms__condition {
+            color: var(--white);
             margin-right: 1rem;
             margin-top: 0.5rem;
         }
@@ -38,7 +32,7 @@ $border-color: #dd0031;
 
 @media (min-width: 768px) and (max-width: 990px) {
     .footer {
-        .partI {
+        .block__rights {
             padding-right: 2rem;
         }
     }
