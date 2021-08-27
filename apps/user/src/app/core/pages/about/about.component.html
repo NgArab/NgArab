@@ -1,1 +1,26 @@
-<p>about works!</p>
+<div class="about_pg">
+  <div class="red-circle"></div>
+  <div class="page-content">
+    <h1 class="pg-title">اعرف اكتر عن فريقنا</h1>
+    <p class="title-desc">
+      احنا مجموعة من الشباب هدفنا نضيف قيمه لمجتمعنا ونساعد معظم المطورين سواء
+      في بداية حياتهم المهنية او خبراءcc
+    </p>
+    <div class="slider">
+      <ng-container *ngFor="let item of testArr">
+        <div class="ele">
+          <div class="img">
+            <img [src]="item.img" alt="" />
+          </div>
+          <div class="desc">
+            <h1 class="name">{{ item.name }}</h1>
+            <h2 class="title">{{ item.jop }}</h2>
+            <p class="member_desc">
+              {{ item.desc }}
+            </p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
