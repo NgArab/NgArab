@@ -1,0 +1,25 @@
+<div class="about">
+  <div class="about__content">
+    <h1 class="about__title">اعرف اكتر عن فريقنا</h1>
+    <p class="about__desc">
+      احنا مجموعة من الشباب هدفنا نضيف قيمه لمجتمعنا ونساعد معظم المطورين سواء
+      في بداية حياتهم المهنية او خبراءcc
+    </p>
+    <div class="about__slider">
+      <ng-container *ngFor="let item of sliderArr">
+        <div class="about__slider--ele">
+          <div class="about__slider--ele--img">
+            <img [src]="item.img" alt="" />
+          </div>
+          <div class="about__slider--ele--desc">
+            <h1 class="about__slider--ele--desc--name">{{ item.name }}</h1>
+            <h2 class="about__slider--ele--desc--title">{{ item.jop }}</h2>
+            <p class="about__slider--ele--desc--member_desc">
+              {{ item.desc }}
+            </p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

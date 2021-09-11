@@ -17,7 +17,13 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "src",
+    "paths": {
+      "@env/*": ["environments/*"],
+      "@core/*": ["app/core/pages/*"],
+      "@shared/*": ["app/shared/components/*"]
+    }
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,
