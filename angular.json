@@ -37,7 +37,7 @@
       "projectType": "application",
       "root": "apps/admin",
       "sourceRoot": "apps/admin/src",
-      "prefix": "ng-arab",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -171,7 +171,7 @@
       "projectType": "application",
       "root": "apps/user",
       "sourceRoot": "apps/user/src",
-      "prefix": "ng-arab",
+      "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
