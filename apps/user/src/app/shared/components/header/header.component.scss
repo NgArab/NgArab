@@ -3,12 +3,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 1.8rem 0rem;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
+    position: relative;
     background-color: transparent;
-    z-index: 10;
     .navbar__brand {
         padding-right: 4rem;
         img {
@@ -36,7 +32,6 @@
                     bottom: -0.7rem;
                     left: 0;
                     right: 0;
-
                     margin: auto;
                     width: 0px;
                     content: ".";
