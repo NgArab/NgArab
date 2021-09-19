@@ -339,10 +339,10 @@
           "builder": "@nrwl/workspace:run-commands",
           "outputs": [],
           "options": {
-            "commands": ["ng deploy-testing"]
+            "commands": ["ng deploy"]
           }
         },
-        "deploy-testing": {
+        "deploy": {
           "builder": "@angular/fire:deploy",
           "options": {
             "ssr": true,
