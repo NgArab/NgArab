@@ -20,8 +20,10 @@ jobs:
         run: npm ci
 
       - name: Nrwl Nx Production
+        uses: MansaGroup/nrwl-nx-action@v2.0.4
         if: ${{ github.ref == 'refs/heads/main' }}
-        run: npm i @angular/cli && ng deploy
+        with:
+          targets: deploy-tst
 
       - name: Nrwl Nx Testing
         uses: MansaGroup/nrwl-nx-action@v2.0.4
