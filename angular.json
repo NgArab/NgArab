@@ -335,12 +335,19 @@
             "commands": ["npm run build:ssr"]
           }
         },
-        "deploy": {
+        "deploy-tst": {
+          "builder": "@nrwl/workspace:run-commands",
+          "outputs": [],
+          "options": {
+            "commands": ["ng deploy-testing"]
+          }
+        },
+        "deploy-testing": {
           "builder": "@angular/fire:deploy",
           "options": {
             "ssr": true,
             "buildTarget": "user:build",
-            "firebaseProject": "user-{args.ENV}"
+            "firebaseProject": "user-testing"
           }
         }
       }

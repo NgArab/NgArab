@@ -23,8 +23,7 @@ jobs:
         uses: MansaGroup/nrwl-nx-action@v2.0.4
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          targets: deploy
-          args: --FIREBASE_TOKEN=${{secrets.FIREBASE_TOKEN}} --ENV=production
+          targets: deploy-tst
 
       - name: Nrwl Nx Testing
         uses: MansaGroup/nrwl-nx-action@v2.0.4
