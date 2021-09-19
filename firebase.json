@@ -2,8 +2,10 @@
   "hosting": [
     {
       "target": "user",
-      "public": "dist/user/dist/user/browser",
-      "ignore": ["**/.*"],
+      "public": "dist\\user\\dist\\user\\browser",
+      "ignore": [
+        "**/.*"
+      ],
       "headers": [
         {
           "source": "*.[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f].+(css|js)",
@@ -25,7 +27,11 @@
     {
       "target": "admin",
       "public": "dist/apps/admin",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
       "rewrites": [
         {
           "source": "**",

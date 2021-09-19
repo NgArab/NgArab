@@ -336,12 +336,11 @@
           }
         },
         "deploy": {
-          "builder": "@nrwl/workspace:run-commands",
-          "outputs": [],
+          "builder": "@angular/fire:deploy",
           "options": {
-            "commands": [
-              "npx firebase use user-{args.ENV} --token {args.FIREBASE_TOKEN} && npm run build:ssr && node copy-angular-app && npx firebase deploy --only functions:ssr,hosting:user --token {args.FIREBASE_TOKEN}"
-            ]
+            "ssr": true,
+            "buildTarget": "user:build",
+            "firebaseProject": "user-{args.ENV}"
           }
         }
       }
