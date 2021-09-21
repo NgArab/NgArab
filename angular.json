@@ -335,13 +335,7 @@
             "commands": ["npm run build:ssr"]
           }
         },
-        "deploy-tst": {
-          "builder": "@nrwl/workspace:run-commands",
-          "outputs": [],
-          "options": {
-            "commands": ["ng deploy"]
-          }
-        },
+
         "deploy": {
           "builder": "@angular/fire:deploy",
           "options": {
