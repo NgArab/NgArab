@@ -11,8 +11,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      env:
-        FIREBASE_TOKEN: 1//0cJZcarCrL7ymCgYIARAAGAwSNwF-L9IrxMCg27L5ssQqyiKjE37iJWGa38aCL2ukjHcoTB9IIB47rsGw9HsdBfRfFc4Om4PePmA
+      - env:
+        FIREBASE_TOKEN: '1//0cJZcarCrL7ymCgYIARAAGAwSNwF-L9IrxMCg27L5ssQqyiKjE37iJWGa38aCL2ukjHcoTB9IIB47rsGw9HsdBfRfFc4Om4PePmA'
       - name: Checkout repository (#2)
         uses: actions/checkout@v2
         with:
