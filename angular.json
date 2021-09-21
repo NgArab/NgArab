@@ -339,7 +339,7 @@
           "builder": "@nrwl/workspace:run-commands",
           "outputs": [],
           "options": {
-            "commands": ["ng deploy --token $FIREBASE_TOKEN --non-interactive"]
+            "commands": ["ng deploy"]
           }
         },
         "deploy": {
