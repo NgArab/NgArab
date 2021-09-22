@@ -5,7 +5,8 @@ import { AboutComponent } from '@core/about/about.component';
 import { HistoryComponent } from '@core/history/history.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'history', component: HistoryComponent },
 ];
