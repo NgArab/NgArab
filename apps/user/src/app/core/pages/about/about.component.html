@@ -1,4 +1,4 @@
-<div class="about">
+<div class="about" (window:resize)="detectScreenWidth($event)">
   <div class="about__content">
     <h1 class="about__title">اعرف اكتر عن فريقنا</h1>
     <p class="about__desc">
@@ -6,19 +6,23 @@
       في بداية حياتهم المهنية او خبراءcc
     </p>
     <div class="about__slider">
-      <ng-container *ngFor="let item of sliderArr">
-        <div class="about__slider--ele">
-          <div class="about__slider--ele--img">
-            <img [src]="item.img" alt="" />
+      <ng-container *ngFor="let item of sliderArr; let itemIndex = index">
+        <ng-container
+          *ngIf="(screenWidth <= 576 && itemIndex == 0) || screenWidth > 576"
+        >
+          <div class="about__slider--ele">
+            <div class="about__slider--ele--img">
+              <img [src]="item.img" alt="" />
+            </div>
+            <div class="about__slider--ele--desc">
+              <h1 class="about__slider--ele--desc--name">{{ item.name }}</h1>
+              <h2 class="about__slider--ele--desc--title">{{ item.jop }}</h2>
+              <p class="about__slider--ele--desc--member_desc">
+                {{ item.desc }}
+              </p>
+            </div>
           </div>
-          <div class="about__slider--ele--desc">
-            <h1 class="about__slider--ele--desc--name">{{ item.name }}</h1>
-            <h2 class="about__slider--ele--desc--title">{{ item.jop }}</h2>
-            <p class="about__slider--ele--desc--member_desc">
-              {{ item.desc }}
-            </p>
-          </div>
-        </div>
+        </ng-container>
       </ng-container>
     </div>
   </div>
