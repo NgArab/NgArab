@@ -1,0 +1,141 @@
+
+// colors
+$primary: #1d8cf8;
+$secondary: #4f537b;
+$info: #11cdef;
+$success: #00bf9a;
+$warning: #ff8d72;
+$danger: #fd5d93;
+
+// timeline variables
+$body-bg: #1e1e2f;
+$timeline-before-bg : #222a42;
+$timeline-body-bg: #15202b;
+$timeline-body-round: 3px;
+$timeline-body-shadow: 1px 3px 9px rgba(0,0,0, .1);
+
+// page container
+.container {
+    max-width: 80%;
+    margin: 50px auto;
+}
+
+// typography
+p {
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 14px;
+    opacity: .8;
+}
+
+// timeline style
+.timeline {
+    position: relative;
+    padding-right: 4rem;
+    margin: 0 0 0 30px;
+    color: white;
+
+    &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background: $timeline-body-bg;
+    }
+
+    .timeline-container {
+        position: relative;
+        margin-bottom: 2.5rem;
+        box-shadow: 0px 0px 3px 3px rgb(255 255 255 / 23%);
+
+        .timeline-icon {
+            position: absolute;
+            right: -88px;
+            top: 4px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 2rem;
+            background: $secondary;
+        }
+
+        .timeline-body {
+            background: $timeline-body-bg;
+            border-radius: $timeline-body-round;
+            padding: 20px 20px 15px;
+            box-shadow: $timeline-body-shadow;
+
+            &:before {
+                content: '';
+                background: inherit;
+                width: 20px;
+                height: 20px;
+                display: block;
+                position: absolute;
+                right: -10px;
+                transform: rotate(45deg);
+                border-radius: 0 0 0 2px;
+                box-shadow: 3px -2px 3px 0px rgb(255 255 255 / 23%)
+            }
+
+            .timeline-title {
+                margin-bottom: 1.4rem;
+                display: flex;
+                justify-content: space-between;
+
+                .badge {
+                    background: $secondary;
+                    padding: 4px 8px;
+                    border-radius: 3px;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+
+            .timeline-subtitle {
+                font-weight: 300;
+                font-style: italic;
+                opacity: .4;
+                margin-top: 16px;
+                font-size: 11px;
+            }
+        }
+
+        // Info Timeline
+        &.info {
+            .badge,
+            .timeline-icon {
+                background: $info !important;
+            }
+        }
+
+        // Success Timeline
+        &.success {
+            .badge,
+            .timeline-icon {
+                background: $success !important;
+            }
+        }
+
+        // Warning Timeline
+        &.warning {
+            .badge,
+            .timeline-icon {
+                background: $warning !important;
+            }
+        }
+
+        // Danger Timeline
+        &.danger {
+            .badge,
+            .timeline-icon {
+                background: $danger !important;
+            }
+        }
+
+    }
+}
+
