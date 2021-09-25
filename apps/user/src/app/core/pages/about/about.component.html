@@ -3,7 +3,7 @@
     <h1 class="about__title">اعرف اكتر عن فريقنا</h1>
     <p class="about__desc">
       احنا مجموعة من الشباب هدفنا نضيف قيمه لمجتمعنا ونساعد معظم المطورين سواء
-      في بداية حياتهم المهنية او خبراءcc
+      في بداية حياتهم المهنية أو خبراء
     </p>
     <div class="about__slider">
       <ng-container *ngFor="let item of sliderArr; let itemIndex = index">
@@ -12,7 +12,7 @@
         >
           <div class="about__slider--ele">
             <div class="about__slider--ele--img">
-              <img [src]="item.img" alt="" />
+              <img [src]="'../../../../assets/imags/' + item.img" alt="" />
             </div>
             <div class="about__slider--ele--desc">
               <h1 class="about__slider--ele--desc--name">{{ item.name }}</h1>
