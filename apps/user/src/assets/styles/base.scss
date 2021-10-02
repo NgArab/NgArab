@@ -29,8 +29,9 @@ grammarly-desktop-integration {
 }
 
 .content {
-  min-height: calc(100vh - 380px);
- 
+  min-height: calc(100vh - 30vh);
+  display: grid;
+  overflow: hidden;
 }
 
 .container {
@@ -40,9 +41,13 @@ grammarly-desktop-integration {
   margin-left: auto;
 }
 @media (min-width: 768px) {
+ /*  .content {
+    height: auto;
+  } */
   .container {
     width: 750px;
   }
+  
 }
 @media (min-width: 992px) {
   .container {

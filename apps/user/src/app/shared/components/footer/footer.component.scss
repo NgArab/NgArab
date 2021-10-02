@@ -1,6 +1,9 @@
 .footer {
   
     padding: 1rem 0rem;
+    height: 13vh;
+    display: flex;
+    align-items: flex-end;
     .container{
         display: flex;
         .block__rights {
@@ -20,8 +23,9 @@
 @media only screen and (max-width: 767px) {
     .footer {
       
-        .container{
-            display: block;
+    .container{
+        display: block;
+        width: 100%;
         .block__rights {
            /*  padding-right: 1rem; */
         }
