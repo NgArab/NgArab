@@ -24,9 +24,46 @@ img {
 input {
   -webkit-background-clip: text !important;
 }
+grammarly-desktop-integration {
+  display: none;
+}
 
 .content {
-  min-height: calc(100vh - 380px);
- 
+  min-height: calc(100vh - 30vh);
+  display: grid;
+  overflow: hidden;
 }
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+ /*  .content {
+    height: auto;
+  } */
+  .container {
+    width: 750px;
+  }
+  
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1300px;
+  }
+}
+
 
