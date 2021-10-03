@@ -1,13 +1,8 @@
 .home {
-<<<<<<< HEAD
   background-color: var(--black);
   display: flex;
   .block {
     width: 50%;
-=======
-     height: 100ch; 
-    background-color: var(--black);
->>>>>>> 9f6a64c... feat(home): chang burger menu in responsive and make routing and change button hover
     display: flex;
     align-items: center;
 
@@ -26,7 +21,6 @@
         line-height: 1.88;
       }
 
-<<<<<<< HEAD
       .block__content__btn {
         background-color: var(--orange);
 
@@ -37,24 +31,6 @@
         border: none;
         border-radius: 0.4rem;
       }
-=======
-            .block__content__btn {
-                border: 1px solid var(--orange);
-                font-size: 1.5rem;
-                padding: 0.8rem 3.5rem;
-                margin-top: 0.5rem;
-                background: transparent;
-                border-radius: 0.4rem;
-                transition: all 0.5s ease-in-out;
-                cursor: pointer;
-                color:var(--orange) ;
-                &:hover{
-                    background-color: var(--orange);
-                    color: var(--black);
-                }
-            }
-        }
->>>>>>> 9f6a64c... feat(home): chang burger menu in responsive and make routing and change button hover
     }
   }
 
@@ -79,7 +55,6 @@
       display: flex;
       align-items: center;
 
-<<<<<<< HEAD
       .block__content {
         padding-right: 1rem;
         .block__content__text {
@@ -93,17 +68,6 @@
           margin-top: 1rem;
           margin-bottom: 1rem;
           line-height: 1.88;
-=======
-                .block__content__btn {
-                   
-                    font-size: 1.5rem;
-                    padding: 0.8rem 3.5rem;
-                    margin-top: 0.5rem;
-                  
-                    border-radius: 0.4rem;
-                }
-            }
->>>>>>> 9f6a64c... feat(home): chang burger menu in responsive and make routing and change button hover
         }
 
         .block__content__btn {
@@ -151,7 +115,6 @@
           line-height: 1.88;
         }
 
-<<<<<<< HEAD
         .block__content__btn {
           background-color: var(--orange);
 
@@ -161,17 +124,6 @@
           margin-top: 0.5rem;
           border: none;
           border-radius: 0.4rem;
-=======
-                .block__content__btn {
-                  
-                    font-size: 1.5rem;
-                    padding: 0.8rem 3.5rem;
-                    margin-top: 0.5rem;
-                  
-                    border-radius: 0.4rem;
-                }
-            }
->>>>>>> 9f6a64c... feat(home): chang burger menu in responsive and make routing and change button hover
         }
       }
     }
