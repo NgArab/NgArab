@@ -64,6 +64,9 @@
           @media (max-width: 768px) {
             font-size: 14px;
           }
+          @media (max-width: 430px) {
+            font-size: 5vw;
+          }
         }
         &--title {
           font-size: 16px;
@@ -71,6 +74,9 @@
         &--member_desc {
           color: var(--gray-med);
           line-height: 1.7;
+          @media (max-width: 430px) {
+            font-size: 4.5vw;
+          }
         }
       }
 
@@ -88,6 +94,9 @@
         @media (max-width: 576px) {
           width: 100%;
           height: 30rem;
+        }
+        @media (max-width: 430px) {
+          height: 25rem;
         }
         @media (max-width: 300px) {
           width: 15rem;
