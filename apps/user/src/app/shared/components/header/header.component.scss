@@ -2,6 +2,9 @@
     padding: 1.8rem 0rem;
     position: relative;
     background-color: transparent;
+    height: 17vh;
+    display: flex;
+    align-items: center;
     .container {
         display: flex;
         align-items: center;
@@ -184,6 +187,7 @@
     .header {
         padding: 1rem 0rem;
         .container {
+            width: 100%;
             .navbar__items {
                 display: none;
             }
