@@ -52,6 +52,7 @@ p {
 
         .timeline-icon {
             position: absolute;
+            display: grid;
             right: -88px;
             top: 4px;
             width: 50px;
@@ -60,6 +61,10 @@ p {
             text-align: center;
             font-size: 2rem;
             background: $secondary;
+            span{
+              font-size: 13px;
+              color: $secondary;
+            }
         }
 
         .timeline-body {
