@@ -57,7 +57,7 @@ export class AboutComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.animateSlider();
+    this.animateSlider();
   }
   // animate slider
   animateSlider() {
