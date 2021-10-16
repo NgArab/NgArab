@@ -59,10 +59,13 @@ p {
       text-align: center;
       font-size: 2rem;
       background: $secondary;
+      padding-top: 5px;
+      line-height: 1;
+
       span {
         font-size: 13px;
-        color: $secondary;
         font-weight: bold;
+        margin-bottom: 5px;
       }
     }
 
