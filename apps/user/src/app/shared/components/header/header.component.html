@@ -1,29 +1,64 @@
 <section class="header">
-  <div class="navbar__brand">
-    <img src="assets/125161515_685790432374641_6739507034179800526_n.png" />
-  </div>
-  <div class="navbar__block">
-    <img
-      src="assets/icons8-menu.svg"
-      class="navbar__block_icon_menu"
-      (click)="flag = !flag"
-    />
-  </div>
-  <div class="navbar__items">
-    <ul>
-      <li class="navbar__item">الرئسية</li>
-      <li class="navbar__item">من نحن</li>
-      <li class="navbar__item">تاريخنا</li>
-      <li class="navbar__item__button">
-        <button type="button" class="navbar__item__btn">تسجيل دخول</button>
-      </li>
-    </ul>
-  </div>
+  <div class="container">
+    <div class="navbar__brand">
+      <img src="assets/125161515_685790432374641_6739507034179800526_n.png" />
+    </div>
+    <div class="navbar__block">
+      <img
+        src="assets/icons8-menu.svg"
+        class="navbar__block_icon_menu"
+        (click)="flag = !flag"
+      />
+    </div>
+    <div class="navbar__items">
+      <ul>
+        <li class="navbar__item" routerLink="/home" routerLinkActive="active">
+          الرئيسية
+        </li>
+        <li class="navbar__item" routerLink="/about" routerLinkActive="active">
+          من نحن
+        </li>
+        <li
+          class="navbar__item"
+          routerLink="/history"
+          routerLinkActive="active"
+        >
+          تاريخنا
+        </li>
+        <li class="navbar__item__button">
+          <button type="button" class="navbar__item__btn">تسجيل دخول</button>
+        </li>
+      </ul>
+    </div>
 
-  <div class="navbar__items_responsvie" [ngClass]="{ active: flag }">
-    <div class="navbar__item">الرئسية</div>
-    <div class="navbar__item">من نحن</div>
-    <div class="navbar__item">تاريخنا</div>
-    <button type="button" class="navbar__item__btn">تسجيل دخول</button>
+    <div class="navbar__items_responsvie" [ngClass]="{ active: flag }"></div>
   </div>
 </section>
+
+<a
+  id="close_side_menu"
+  href="javascript:void(0);"
+  class="side__menu__overlay"
+  (click)="flag = !flag"
+  [ngClass]="{ 'side__menu__overlay--active': flag }"
+></a>
+
+<div class="side__menu" [ngClass]="{ 'side__menu--active': flag }">
+  <img
+    src="assets/4115230_cancel_close_delete_icon.svg"
+    class="side__menu__img__close"
+    (click)="flag = !flag"
+  />
+  <div class="side__menu__inner__wrapper">
+    <div class="navbar__item" routerLink="/home" routerLinkActive="active">
+      الرئسية
+    </div>
+    <div class="navbar__item" routerLink="/about" routerLinkActive="active">
+      من نحن
+    </div>
+    <div class="navbar__item" routerLink="/history" routerLinkActive="active">
+      تاريخنا
+    </div>
+    <button type="button" class="navbar__item__btn">تسجيل دخول</button>
+  </div>
+</div>
