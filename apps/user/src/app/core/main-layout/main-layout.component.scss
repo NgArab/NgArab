@@ -10,4 +10,15 @@
     flex-direction: column;
     justify-content: center;
   }
+
+  &--active {
+    padding: 0px;
+    background-color: #17232f;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .main-layout {
+    padding: 0 0px 0 0px;
+  }
 }

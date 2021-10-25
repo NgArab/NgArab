@@ -39,6 +39,20 @@ const routes: Routes = [
             (m) => m.HistoryModule
           ),
       },
+      {
+        path: 'test-info',
+        loadChildren: () =>
+          import('../../pages/test-info/modules/test-info.module').then(
+            (m) => m.TestInfoModule
+          ),
+      },
+      {
+        path: 'question',
+        loadChildren: () =>
+          import('../../pages/question/modules/question.module').then(
+            (m) => m.QuestionModule
+          ),
+      },
     ],
   },
 ];
