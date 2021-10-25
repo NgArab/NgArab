@@ -5,7 +5,6 @@ name: Deploy Affected Projects To Firebase
 'on':
   push:
     branches:
-      - main
       - tst
 jobs:
   deploy:
@@ -18,13 +17,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Nrwl Nx Production
-        uses: MansaGroup/nrwl-nx-action@v2.0.4
-        if: ${{ github.ref == 'refs/heads/main' }}
-        with:
-          targets: deploy
-          args: --FIREBASE_TOKEN=${{secrets.FIREBASE_TOKEN}} --ENV=production
 
       - name: Nrwl Nx Testing
         uses: MansaGroup/nrwl-nx-action@v2.0.4
