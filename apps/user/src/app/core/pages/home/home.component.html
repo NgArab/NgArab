@@ -7,7 +7,13 @@
           ان جي عرب هو اول موقع عربي يساعدك علي تطوير نفسك بدأنا بالاختبارات و
           سننمو اسرع مما تتصور
         </p>
-        <button type="button" class="block__content__btn">ابدأ الاختبار</button>
+        <button
+          type="button"
+          class="block__content__btn"
+          (click)="this.popup = true"
+        >
+          ابدأ الاختبار
+        </button>
       </div>
     </div>
 
@@ -16,3 +22,4 @@
     </div>
   </div>
 </div>
+<app-popup [popup_flag]="popup" (tragerPopup)="closePopup($event)"></app-popup>
