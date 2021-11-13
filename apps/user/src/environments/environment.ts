@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  baseURL: 'https://ng-arab.herokuapp.com/api/v1',
 };
 
 /*
