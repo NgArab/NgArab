@@ -7,10 +7,21 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./test-info.component.scss'],
 })
 export class TestInfoComponent implements OnInit {
-  constructor(private _route: Router) {}
+  level: any;
+  constructor(private _route: Router,private route: ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      if (params.level) {
+        this.level = params.level;
+      } else {
+        this._route.navigate(['/home'])
+      }
+      
+       
+    });
+  }
   goToQuestion() {
-    this._route.navigateByUrl('/question');
+    this._route.navigate(['/question'],{ queryParams: {level: this.level}});
   }
 }

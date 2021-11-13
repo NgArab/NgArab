@@ -11,10 +11,10 @@
       </div>
       <div class="question_content_rightSide_groupButoon">
         <div class="question_content_rightSide_groupButoon_buttonChange">
-          <button>تغير السؤال</button>
+          <button class="disabled" disabled>تغير السؤال</button>
         </div>
         <div class="question_content_rightSide_groupButoon_buttonHint">
-          <button>تلميح</button>
+          <button class="disabled" disabled>تلميح</button>
         </div>
       </div>
 
@@ -24,45 +24,74 @@
     </div>
     <div class="question_content_bodyQuestion">
       <div class="question_content_bodyQuestion_question">
-        <div class="question_content_bodyQuestion_textQuestion">
-          هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في
-          صناعات المطابع ودور النشر يُستخدم في صناعات المطابع ودور النشر هو
-          ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في
-          صناعات المطابع ودور النشر بمعنى أن الغاية
-        </div>
-        <div class="question_content_bodyQuestion_groupChosse">
-          <label class="radio radio-gradient">
-            <span class="radio__input">
-              <input type="radio" name="radio" />
-              <span class="radio__control"></span>
-            </span>
-            <span class="radio__label">ويُستخدم في صناعات المطابع ودور </span>
-          </label>
 
-          <label class="radio radio-gradient">
-            <span class="radio__input">
-              <input type="radio" name="radio" />
-              <span class="radio__control"></span>
-            </span>
-            <span class="radio__label"
-              >صناعات المطابع ودور النشر هو ببساطة نص شكلي
-            </span>
-          </label>
-        </div>
+        <ng-container *ngFor="let item of front_question; let i=index">
+          <div class="error_body" *ngIf="flag_error">
+            <img src="assets/information1.svg" class="img-fluid" />
+            <ng-container>
+               اختار الاجابة للدخول علي السوال اللي بعدة  
+            </ng-container>
+          </div>
+          <div class="question_content_bodyQuestion_textQuestion" [innerHTML]="item.question">
+          
+          </div>
+          <div class="question_content_bodyQuestion_groupChosse">
+            <label class="radio radio-gradient" *ngFor="let item1 of item.answers">
+              <span class="radio__input">
+                <input type="radio" name="radio"
+                [value]="item1.id"
+                [(ngModel)]="item.finalAnswer"
+               />
+                <span class="radio__control"></span>
+              </span>
+              <span class="radio__label"  [innerHTML]="item1.answer"></span>
+            </label>
+  
+           
+          </div>
+     
+        
+     
+
+       
 
         <div class="question_content_bodyQuestion_groupButoon">
           <div class="question_content_bodyQuestion_groupButoon_buttonNext">
-            <button>الى بعده</button>
+            
+
+            <button [disabled]="loadingBU1" (click)="choose(item)">
+              <ng-container *ngIf="loadingBU1 == false">   
+                
+                الى بعده</ng-container>
+        
+              <ng-container *ngIf="loadingBU1">
+                <div class="sk-circle">
+                  <div class="sk-circle1 sk-child"></div>
+                  <div class="sk-circle2 sk-child"></div>
+                  <div class="sk-circle3 sk-child"></div>
+                  <div class="sk-circle4 sk-child"></div>
+                  <div class="sk-circle5 sk-child"></div>
+                  <div class="sk-circle6 sk-child"></div>
+                  <div class="sk-circle7 sk-child"></div>
+                  <div class="sk-circle8 sk-child"></div>
+                  <div class="sk-circle9 sk-child"></div>
+                  <div class="sk-circle10 sk-child"></div>
+                  <div class="sk-circle11 sk-child"></div>
+                  <div class="sk-circle12 sk-child"></div>
+                </div>
+              </ng-container>
+            </button>
           </div>
           <div class="question_content_bodyQuestion_groupButoon_buttonPrev">
-            <button>السؤال السابق</button>
+            <button class="disabled" disabled>السؤال السابق</button>
           </div>
         </div>
+      </ng-container>
       </div>
 
       <div class="question_content_bodyQuestion_progressBar">
         <div class="question_content_bodyQuestion_textProgress">
-          تم الإجابة على <span>3</span> / 20 سؤال
+          تم الإجابة على <span>{{index}}</span> / {{questions?.questions.length}} سؤال
         </div>
         <div class="question_content_bodyQuestion_progress">
           <div class="progress-outer">
@@ -72,7 +101,8 @@
                   progress-bar progress-bar-info progress-bar-striped
                   active
                 "
-                style="width: 80%"
+                
+                [ngStyle]="{'width': prescenOfQuestion+'%'}"
               >
                 <div class="progress-value"></div>
               </div>
@@ -83,3 +113,11 @@
     </div>
   </div>
 </section>
+
+
+<div class="overlay" [ngClass]="{'overlay--active': loading}">
+  <div class="spinner">
+    <div class="dot1"></div>
+    <div class="dot2"></div>
+  </div>
+</div>
