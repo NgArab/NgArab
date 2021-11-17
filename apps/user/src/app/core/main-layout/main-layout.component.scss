@@ -1,0 +1,24 @@
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0 50px 0 50px;
+
+  &__content {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &--active {
+    padding: 0px;
+    background-color: #17232f;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .main-layout {
+    padding: 0 0px 0 0px;
+  }
+}

@@ -1,0 +1,14 @@
+<div
+  class="main-layout"
+  [ngClass]="{ 'main-layout--active': !ShowService.show }"
+>
+  <div class="main-layout__header" *ngIf="ShowService.show">
+    <app-header></app-header>
+  </div>
+  <div class="main-layout__content">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="main-layout__footer" *ngIf="ShowService.show">
+    <app-footer></app-footer>
+  </div>
+</div>

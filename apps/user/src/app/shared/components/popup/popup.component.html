@@ -1,0 +1,92 @@
+<div
+  class="overlay"
+  (click)="closePopup()"
+  [ngClass]="{ 'overlay--active': popup_flag }"
+></div>
+<div class="ChosseTest" [ngClass]="{ 'ChosseTest--active': popup_flag }">
+  <div class="error_body" *ngIf="flag_error">
+    <img src="assets/information1.svg" class="img-fluid" />
+    <ng-container>
+      {{ error_message }}
+    </ng-container>
+  </div>
+  <div class="ChosseTest_text">حدد الاختبار والمستوى</div>
+  <div class="ChosseTest_content">
+    <div class="select_area">
+      <div
+        class="nice-select niceSelect"
+        tabindex="0"
+        [ngClass]="{ open: open }"
+      >
+        <div class="current" (click)="open = !open">
+          {{ nameTest }}
+        </div>
+        <ul class="list" (click)="open = !open">
+          <ng-container *ngFor="let item of arr_test">
+            <li class="option focus" (click)="nameTest = item.name">
+              <!-- [ngClass]="{ selected: active_item == 1 }"   (click)="filter(1)"-->
+
+              {{ item.name }}
+            </li>
+          </ng-container>
+        </ul>
+        <img
+          class="arrow"
+          src="assets/3994355_arrow_bottom_down_downward_navigation_icon (2).svg"
+          (click)="open = !open"
+        />
+      </div>
+    </div>
+    <div class="select_area">
+      <div
+        class="nice-select niceSelect"
+        tabindex="0"
+        [ngClass]="{ open: open1 }"
+      >
+        <div class="current" (click)="open1 = !open1">
+          {{ nameLevel }}
+        </div>
+        <ul class="list" (click)="open1 = !open1">
+          <ng-container *ngFor="let item of arr_level">
+            <li
+              class="option focus"
+              (click)="nameLevel = item.name; item.active = true"
+            >
+              <!-- [ngClass]="{ selected: active_item == 1 }"   (click)="filter(1)"-->
+
+              {{ item.name }}
+            </li>
+          </ng-container>
+        </ul>
+        <img
+          class="arrow"
+          src="assets/3994355_arrow_bottom_down_downward_navigation_icon (2).svg"
+          (click)="open1 = !open1"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="ChosseTest_button">
+    <button [disabled]="loadingBU1" (click)="goToQuestion()">
+      <ng-container *ngIf="loadingBU1 == false"> ابدأ الاختبار </ng-container>
+
+      <ng-container *ngIf="loadingBU1">
+        <div class="sk-circle">
+          <div class="sk-circle1 sk-child"></div>
+          <div class="sk-circle2 sk-child"></div>
+          <div class="sk-circle3 sk-child"></div>
+          <div class="sk-circle4 sk-child"></div>
+          <div class="sk-circle5 sk-child"></div>
+          <div class="sk-circle6 sk-child"></div>
+          <div class="sk-circle7 sk-child"></div>
+          <div class="sk-circle8 sk-child"></div>
+          <div class="sk-circle9 sk-child"></div>
+          <div class="sk-circle10 sk-child"></div>
+          <div class="sk-circle11 sk-child"></div>
+          <div class="sk-circle12 sk-child"></div>
+        </div>
+      </ng-container>
+    </button>
+  </div>
+</div>

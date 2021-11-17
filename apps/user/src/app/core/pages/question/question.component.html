@@ -1,0 +1,123 @@
+<section class="question">
+  <div class="question_content">
+    <div class="question_content_rightSide">
+      <div class="question_content_rightSide_title">جافا سكربت</div>
+      <div class="question_content_rightSide_textLevel">المستوي الثالث</div>
+      <div class="question_content_rightSide_time">
+        <div class="question_content_rightSide_time_text">الوقت المتبقي</div>
+        <div class="question_content_rightSide_time_count">
+          {{ minutes }}:{{ seconds }}
+        </div>
+      </div>
+      <div class="question_content_rightSide_groupButoon">
+        <div class="question_content_rightSide_groupButoon_buttonChange">
+          <button class="disabled" disabled>تغير السؤال</button>
+        </div>
+        <div class="question_content_rightSide_groupButoon_buttonHint">
+          <button class="disabled" disabled>تلميح</button>
+        </div>
+      </div>
+
+      <div class="question_content_rightSide_brand" routerLink="/home">
+        <img src="assets/125161515_685790432374641_6739507034179800526_n.png" />
+      </div>
+    </div>
+    <div class="question_content_bodyQuestion">
+      <div class="question_content_bodyQuestion_question">
+
+        <ng-container *ngFor="let item of front_question; let i=index">
+          <div class="error_body" *ngIf="flag_error">
+            <img src="assets/information1.svg" class="img-fluid" />
+            <ng-container>
+               اختار الاجابة للدخول علي السوال اللي بعدة  
+            </ng-container>
+          </div>
+          <div class="question_content_bodyQuestion_textQuestion" [innerHTML]="item.question">
+          
+          </div>
+          <div class="question_content_bodyQuestion_groupChosse">
+            <label class="radio radio-gradient" *ngFor="let item1 of item.answers">
+              <span class="radio__input">
+                <input type="radio" name="radio"
+                [value]="item1.id"
+                [(ngModel)]="item.finalAnswer"
+               />
+                <span class="radio__control"></span>
+              </span>
+              <span class="radio__label"  [innerHTML]="item1.answer"></span>
+            </label>
+  
+           
+          </div>
+     
+        
+     
+
+       
+
+        <div class="question_content_bodyQuestion_groupButoon">
+          <div class="question_content_bodyQuestion_groupButoon_buttonNext">
+            
+
+            <button [disabled]="loadingBU1" (click)="choose(item)">
+              <ng-container *ngIf="loadingBU1 == false">   
+                
+                الى بعده</ng-container>
+        
+              <ng-container *ngIf="loadingBU1">
+                <div class="sk-circle">
+                  <div class="sk-circle1 sk-child"></div>
+                  <div class="sk-circle2 sk-child"></div>
+                  <div class="sk-circle3 sk-child"></div>
+                  <div class="sk-circle4 sk-child"></div>
+                  <div class="sk-circle5 sk-child"></div>
+                  <div class="sk-circle6 sk-child"></div>
+                  <div class="sk-circle7 sk-child"></div>
+                  <div class="sk-circle8 sk-child"></div>
+                  <div class="sk-circle9 sk-child"></div>
+                  <div class="sk-circle10 sk-child"></div>
+                  <div class="sk-circle11 sk-child"></div>
+                  <div class="sk-circle12 sk-child"></div>
+                </div>
+              </ng-container>
+            </button>
+          </div>
+          <div class="question_content_bodyQuestion_groupButoon_buttonPrev">
+            <button class="disabled" disabled>السؤال السابق</button>
+          </div>
+        </div>
+      </ng-container>
+      </div>
+
+      <div class="question_content_bodyQuestion_progressBar">
+        <div class="question_content_bodyQuestion_textProgress">
+          تم الإجابة على <span>{{index}}</span> / {{questions?.questions.length}} سؤال
+        </div>
+        <div class="question_content_bodyQuestion_progress">
+          <div class="progress-outer">
+            <div class="progress">
+              <div
+                class="
+                  progress-bar progress-bar-info progress-bar-striped
+                  active
+                "
+                
+                [ngStyle]="{'width': prescenOfQuestion+'%'}"
+              >
+                <div class="progress-value"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="overlay" [ngClass]="{'overlay--active': loading}">
+  <div class="spinner">
+    <div class="dot1"></div>
+    <div class="dot2"></div>
+  </div>
+</div>
