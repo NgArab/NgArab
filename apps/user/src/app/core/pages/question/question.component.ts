@@ -113,6 +113,7 @@ export class QuestionComponent implements OnInit {
         this.apiservices.answerExam(obj).subscribe(res => {
           this.loadingBU1 = false;
           clearInterval(this.Interval);
+          this._route.navigate(['/home']) 
         }, err => {
           this.loadingBU1 = false;
         })
